@@ -1,4 +1,5 @@
 
+let fetch = require('node-fetch');
 let { URL, URLSearchParams } = require('url');
 let find_number = require('./get_number');
 
