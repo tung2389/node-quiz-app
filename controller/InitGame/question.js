@@ -10,7 +10,7 @@ let info = [
     },
     {
         type: 'input',
-        name: 'number_of_question',
+        name: 'number_of_questions',
         message: 'Number of question ?',
         validate: validation.validate_number
     },

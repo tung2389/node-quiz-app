@@ -11,10 +11,12 @@ function generate_question(all_data){
     );
 
     shuffle_question(all_choices);
+    
+    let question_number = i + 1;
 
     let single_question = {
         type: 'list',
-        name: 'question ' + i,
+        name: 'question ' + question_number,
         message: entities.decodeHTML(data.question),
         choices: all_choices
     };

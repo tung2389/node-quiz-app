@@ -8,7 +8,10 @@ async function play_game(number_of_question, quiz_category){
 
     let all_questions = await generate_question(response.results);
     
-    inquirer.prompt(all_questions);
+    return {
+        ask: inquirer.prompt(all_questions),
+        all_data: response.results
+    };
 }
 
 module.exports = play_game;
