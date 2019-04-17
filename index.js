@@ -23,31 +23,3 @@ init_game().then(async function(info){
         })
     });
 });
-// function check_exist(file_name){
-//     return new Promise(function(resolve,reject){
-//         fs.stat(file_name,function(err){
-//             resolve(err);
-//         });
-//     })
-// }
-// check_exist('random.json').then(function(err){
-//     if(err){
-//         console.log("a");
-//     }
-//     else{
-//         console.log("b");
-//     }
-// })
-// let all_data = [
-//     {
-//         correct_answer: "a"
-//     },
-//     {
-//         correct_answer: "b"
-//     }
-// ]
-// let all_answers = [
-//     {
-//         question
-//     }
-// ]
