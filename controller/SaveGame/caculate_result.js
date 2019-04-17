@@ -8,12 +8,12 @@ function caculate_result(all_data,all_answers){
     for( let i = 0; i < all_data.length; i++){
         let data = all_data[i];
         let question_number = i + 1;
-        if(entities.decodeHTML(data.correct_answer) === all_answers['question' + question_number]){
-            true_answers.push(i);
+        if(entities.decodeHTML(data.correct_answer) === all_answers['question ' + question_number]){
+            true_answers.push(question_number);
             total_score++;
         }
         else{
-            wrong_answers.push(i);
+            wrong_answers.push(question_number);
         }
     }
     return {

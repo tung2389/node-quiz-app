@@ -21,13 +21,20 @@ async function save_game(info, all_data, all_answers){
         }
 
         else{
-            file_name = 'result' + i + 'json';
+            file_name = 'result' + i + '.json';
         }
 
         await check_exist(file_name).then(function(err){
             //If file doesn't exist
             if(err){
-                fs.writeFile(file_name,file_data);
+                fs.writeFile(file_name,file_data,function(err){
+                    if(err){
+                        console.log(err);
+                    }
+                    else{
+                        console.log('\n Your result has been saved in ' + file_name);
+                    }
+                });
                 ok= true;
             }
         });
